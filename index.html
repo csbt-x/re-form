@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <!-- Created a parent div with class main-div -->
+    <div class="main-div">
+      <!-- Create a form  -->
+      <form id="myForm">
+        <!-- Create a div with class row and inside this create two div with class col -->
+        <div class="row">
+          <div class="col">
+            <label class="control-label">First Name</label>
+            <!-- Create a field-control div for input field and validation message -->
+            <div class="field-control">
+              <input
+                type="text"
+                name="fName"
+                placeholder="First Name"
+                required
+                onChange="getFormData()"
+              />
+              <!-- Create a span tag with validation message. Initially it is display: none -->
+              <span style="display: none">First Name is required</span>
+            </div>
+          </div>
+
+          <div class="col">
+            <label class="control-label">Last Name</label>
+            <input
+              type="text"
+              name="lName"
+              placeholder="Last Name"
+              onChange="getFormData()"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="control-label">Email Id</label>
+            <div class="field-control">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter valid Email"
+                required
+                onChange="getFormData()"
+              />
+              <span style="display: none">Enter a valid email</span>
+            </div>
+          </div>
+
+          <div class="col">
+            <label class="control-label">Gender</label>
+            <!-- Custom radio input - first create a label and inside this create input type radio -->
+            <label class="radio-control"
+              >Male
+              <input
+                type="radio"
+                name="gender"
+                value="Male"
+                checked
+                onChange="getFormData()"
+              />
+              <span></span>
+            </label>
+            <label class="radio-control"
+              >Female
+              <input
+                type="radio"
+                name="gender"
+                value="Female"
+                onChange="getFormData()"
+              />
+              <span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label class="control-label">Education</label>
+            <select name="education" onChange="getFormData()">
+              <option value="postGraduate" selected>Post Graduate</option>
+              <option value="graduate">Graduate</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="highschool">Highschool</option>
+            </select>
+          </div>
+
+          <div class="col">
+            <label class="control-label">Job Location</label>
+            <!-- Custom checkbox input - first create a label and inside this create input type checkbox -->
+            <label class="control-checkbox"
+              >NCR
+              <input
+                type="checkbox"
+                name="ncr"
+                value="ncr"
+                onChange="getFormData()"
+              />
+              <span></span>
+            </label>
+            <label class="control-checkbox"
+              >Mumbai
+              <input
+                type="checkbox"
+                name="mumbai"
+                value="mumbai"
+                onChange="getFormData()"
+              />
+              <span></span>
+            </label>
+            <label class="control-checkbox"
+              >Bangalore
+              <input type="checkbox" name="bangalore" value="bangalore" />
+              <span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
